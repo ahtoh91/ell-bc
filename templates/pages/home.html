@@ -1,0 +1,63 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+{{#partial "hero"}}
+    {{#if carousel}}
+        {{> components/carousel}}
+    {{/if}}
+    {{{snippet 'home_content'}}}
+{{/partial}}
+
+{{#partial "page"}}
+
+    {{#each shipping_messages}}
+        <div class="container">{{> components/common/alert-info message}}</div>
+    {{/each}}
+
+<div class="main full">
+
+    <!-- BEGIN Home Top Banners -->
+    {{> components/halothemes/home-top-banners}}
+    <!-- END Home Top Banners -->
+
+    {{#if products.new}}
+      <div id="homeNewProducts" class="module-wrapper">
+        <div class="container">
+          {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        </div>
+      </div>
+    {{/if}}
+
+    <!-- BEGIN Full Width Block -->
+    {{> components/halothemes/home-full-width-block}}
+    <!-- END Full Width Block -->
+
+    {{#if products.featured}}
+      <div id="homeFeaturedProduct" class="module-wrapper">
+        <div class="container">
+          {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+        </div>
+      </div>
+    {{/if}}
+
+
+    <!-- BEGIN Featured On Ella -->
+    {{> components/halothemes/home-spotlight}}
+    <!-- END Featured On Ella -->
+
+
+    <!-- BEGIN Home Instagram Gallery -->
+    {{> components/halothemes/home-instagram}}
+    <!-- END Home Instagram Gallery -->
+
+</div>
+{{/partial}}
+{{> layout/base}}

@@ -1,0 +1,83 @@
+{{#if banners.bottom}}
+<div class="banners" data-banner-location="bottom">
+    <div class="banner">
+        {{{limit banners.bottom 1}}}
+    </div>
+</div>
+{{/if}}
+
+<footer id="footer-wrapper">
+    <section id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 wow fadeInUp" data-wow-delay="100ms">
+                    <h5>Shop</h5>
+                    <ul>
+                        {{#each categories}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                        {{/each}}
+                        <li><a href="/lookbook/">Lookbook</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 wow fadeInUp" data-wow-delay="300ms">
+                    <h5>Information</h5>
+                    <ul>
+                           <li><a title="Blog" href="/blog/">Blog</a></li>
+                            <li><a title="About Us" href="/about-us/">About Us</a></li>
+                            <li><a href="/rss-syndication/" title="RSS Syndication">RSS Syndication</a></li>
+                            <li><a title="Shipping &amp; Returns" href="/shipping-returns/">Shipping &amp; Returns</a></li>
+                            <li><a title="Site Map" href="/sitemap/">Site Map</a></li>
+                            <li><a title="Contact Us" href="/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 wow fadeInUp" data-wow-delay="500ms">
+                    <h5>Customer Service</h5>
+                    <ul>
+                         <li><a title="Terms &amp; Conditions" href="/terms-conditions/">Terms &amp; Conditions</a></li>
+                            <li><a title="Privacy Policy" href="/privacy-policy/">Privacy Policy</a></li>
+                            <li><a title="Return Policy" href="/return-policy/">Return Policy</a></li>
+                            <li><a title="Rss" href="/rss/">RSS</a></li>
+                            <li><a title="Help &amp; FAQ" href="/help-faq/">Help &amp; FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 wow fadeInUp" data-wow-delay="700ms">
+                    {{> components/common/social-links}}
+                    {{> components/halothemes/footer-facebook-like-button}}
+                    {{#if settings.show_newsletter_box}} {{> components/common/subscription-form}} {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="bottom-footer" class="wow fadeInUp" data-wow-delay="900ms">
+        <div class="container text-{{theme_settings.copyright_alignment}}">
+            {{#if theme_settings.show_copyright_footer}}
+                <div class="footer-copyright">
+                    <p>&copy; <span id="copyright_year"></span> {{settings.store_name}}</p>
+                </div>
+                <script type="text/javascript">
+                    document.getElementById("copyright_year").innerHTML = new Date().getFullYear();
+                </script>
+            {{/if}}
+
+
+
+            {{#if theme_settings.show_template_by}}
+                <div class="template-by">
+                    <p>BigCommerce Templates by <a href="http://themevale.com.com" target="_blank" rel="nofollow">ThemeVale.com</a></p>
+                </div>
+            {{/if}}
+
+            {{> components/common/payment-icons}}
+        <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose GeoTrust SSL for secure e-commerce and confidential communications.">
+        <tbody><tr>
+        <td style="padding:10px 20px" width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.jeansoasis.co.uk&amp;size=M&amp;lang=en"></script><a href="https://sealsplash.geotrust.com/splash?&amp;dn=www.jeansoasis.co.uk" tabindex="-1" onmousedown="return gts_mDown(event);" target="GEOTRUST_SSL_Splash"></a><br>
+        <a href="http://www.geotrust.com/ssl/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;"></a></td>
+        </tr>
+        </tbody></table>
+        </div>
+    </div>
+</footer>
+
+<a href="javascript:void(0);" id="back-to-top">Top</a>

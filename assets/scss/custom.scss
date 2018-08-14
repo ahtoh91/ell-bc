@@ -1,0 +1,190 @@
+/* Custom Styles */
+
+
+/*Halo Advanced Image Swap*/
+
+.prod-item {
+    &:hover{
+        & [data-product-option-change] {
+        opacity: 1;
+        visibility: visible;
+        }
+    }
+    & [data-product-option-change] {
+        opacity: 0;
+        visibility: hidden;
+        &>div[data-product-attribute="swatch"] {
+            text-align: center;
+            margin-bottom: 10px;
+            & .form-option {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 2.5px 0 2.5px;
+                -moz-box-shadow: 0px 0px 1px 0px #838383;
+                -webkit-box-shadow: 0px 0px 1px 0px #838383;
+                box-shadow: 0px 0px 1px 0px #838383;
+                border: 0;
+                &>span {
+                    z-index: 0;
+                    position: static;
+                }
+                &>span[title = 'white']{
+                    border: 1px solid #000;
+                }
+            }
+        }
+    }
+}
+.productList .prod-item .btn-compare{
+margin-top:20px;
+padding-left:0px;
+}
+.productList .prod-item [data-product-option-change]{
+    opacity:1;
+    visibility: visible;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    border: 0;
+}
+@media (max-width: 767px) {
+    .productList .prod-item [data-product-option-change]{
+        display:none;
+    }
+}
+@media (min-width: 1025px) {
+    body.is-sticky #icon-cart .cls-1{
+        fill: #fff;
+    }
+    body.is-sticky #icon-cart .cls-2{
+        fill: #000;
+    }
+}
+.pr_slick{
+    margin-top:20px;
+}
+.pr_slick .productView-thumbnail{
+    margin: 0 10px 0;
+}
+.productView-thumbnails .productView-thumbnail a{
+    outline:none;
+}
+.pr_slick:not(.slick-slider) .productView-thumbnail,
+.pr_main:not(.slick-slider) .productView-image + .productView-image{
+    display: none;
+}
+.pr_slick:not(.slick-slider) .productView-thumbnail:nth-child(-n + 4){
+    display: block;
+    float: left;
+    width:19%;
+}
+.at-icon-wrapper, .at-icon-wrapper svg {
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+}
+.at-resp-share-element .at-share-btn:first-child {
+    margin-left: 0px!important;
+}
+.at-resp-share-element .at-share-btn {
+    padding: 0px !important;
+    margin: 0px 5px 0px !important;
+}
+
+
+@media (max-width: 767px ){
+    .header-top {
+        display: none;
+    }
+}
+
+
+.coupon-code-cancel, .gift-certificate-cancel, .shipping-estimate-hide {
+    font-style: italic;
+    padding-right: 5px;
+}
+
+.imageArea .block-content-note{
+     clear: both;
+    width: 100%;
+    background-color: #fef8e7;
+    padding: 5px;
+margin-top:10px;
+}
+.imageArea .block-content-note p{
+border: 1px solid #fdefc9;
+    letter-spacing: 0.1em;
+    color: #e06868;
+    line-height: 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 7px;
+    text-align: center;
+margin:0px;
+    font-weight: 700;
+}
+.imageArea .col-left{
+    text-align: left;
+}
+#tab-shipping p{
+margin:0px
+}
+.coupon_code .cart-total-value{
+    display:none!important;
+}
+.coupon_code .gift-certificate-code,
+.coupon_code .cart-form.coupon-code{
+    display:block!important;
+}
+.coupon_code .cart-total-label-1 h3{
+font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+    padding-top: 10px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    margin-bottom: 18px;
+    background: #fafafa;
+    letter-spacing: 0.05em;
+    border-bottom-color: #ededed;
+    font-weight: 700;
+  background-color: #f2f2f2;
+margin-top:0px;
+}
+.coupon_code .CouponCode {
+    margin-bottom: 60px;
+}
+.coupon_code p{
+margin-bottom:10px
+}
+.AddThisButtonBox{
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+}
+.addthis_button_google_plusone > .google_plusone_iframe_widget{
+width:auto!important;
+}
+
+.slick-slide {
+  img {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+  }
+}
+
+.slick-current, .slick-active {
+  img {
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
